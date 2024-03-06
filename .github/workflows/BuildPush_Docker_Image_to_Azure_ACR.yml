@@ -40,3 +40,10 @@ jobs:
           file: ./Dockerfile_CONTAINER_for_APP_STAND_ALONE_run # Path to your Dockerfile
           push: true
           tags: ${{ secrets.ACR_REGISTRY }}/repositoryfordockercontainer:image_app_for_azure
+
+      - name: UPDATE Azure Function App
+        run: az functionapp update --name funcapp-via-container-try --resource-group Resource-for-Practice-with-Docker-Container
+
+      - name: RESTART Azure Function App
+        run: az functionapp restart --name funcapp-via-container-try --resource-group Resource-for-Practice-with-Docker-Container
+

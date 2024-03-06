@@ -12,9 +12,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def index():
-    #return "La VRAIE Mme Koffi? C'est Natou Mon AMOUR hein !!"
-    return "Constant"
-
+    return "La VRAIE Mme Koffi? C'est Natou Mon AMOUR hein !!"
 
 
 # WITH Python programming model v2 for Azure Functions, you MUST DECLARE the HTTP trigger itself using a decorator
