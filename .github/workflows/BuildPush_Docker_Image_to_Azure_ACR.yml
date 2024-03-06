@@ -20,6 +20,7 @@ jobs:
           login-server: ${{ secrets.ACR_REGISTRY }} registryfordockercontainer.azurecr.io
           username: ${{ secrets.ACR_USERNAME }}
           password: ${{ secrets.ACR_PASSWORD }}
+          access-token: ${{ secrets.ACR_ACCESS_TOKEN }}
 
         # Enable Docker build Engine
       - name: Set up Docker Buildx
