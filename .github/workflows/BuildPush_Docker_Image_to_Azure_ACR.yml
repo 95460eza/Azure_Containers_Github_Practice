@@ -18,7 +18,7 @@ jobs:
         uses: docker/setup-buildx-action@v1
 
       # Connect ot Azure ACR
-      - name: Login to Azure Container Registry
+      - name: Login to Azure Container Registry (ACR)
         uses: azure/docker-login@v1
         with:
           # Example of login-server: "registryfordockercontainer.azurecr.io"
@@ -40,6 +40,11 @@ jobs:
           file: ./Dockerfile_CONTAINER_for_APP_STAND_ALONE_run # Path to your Dockerfile
           push: true
           tags: ${{ secrets.ACR_REGISTRY }}/repositoryfordockercontainer:image_app_for_azure
+
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_TENANT_ID }} ${{ secrets.AZURE_CLIENT_ID }} ${{ secrets.AZURE_CLIENT_SECRET }}
 
       - name: UPDATE Azure Function App
         run: az functionapp update --name funcapp-via-container-try --resource-group Resource-for-Practice-with-Docker-Container
