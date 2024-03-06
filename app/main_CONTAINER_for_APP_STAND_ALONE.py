@@ -12,7 +12,8 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def index():
-    return "La VRAIE Mme Koffi? C'est Natou Mon AMOUR hein !!"
+    #return "La VRAIE Mme Koffi? C'est Natou Mon AMOUR hein !!"
+    return "Constant"
 
 
 
