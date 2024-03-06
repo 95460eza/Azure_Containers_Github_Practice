@@ -1,0 +1,15 @@
+azure-functions
+Flask==2.0.2
+# Gunicorn is a popular Production-Ready WSGI Server. Another one is uWSGI. 
+gunicorn
+# Werkzeug is used with WSGI servers (like Flask, Django tec...) to handle HTTP requests/responses efficiently.
+Werkzeug==2.0.2
+# The "docker" package provides a Python INTERFACE to INTERACT with Docker USING Python code
+docker== 7.0.0
+# The "redis" package provides a Python INTERFACE to INTERACT with a Redis server FROM your Python code (such as connecting to a Redis server, sending commands, and retrieving results)
+# With "pip install redis": ONLY the CLIENT Python library for Redis, NOT the Redis server itself.
+redis==3.5.3
+click==8.0.3
+itsdangerous==2.0.1
+Jinja2==3.0.2
+MarkupSafe==2.0.1

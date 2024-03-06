@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+    <title>School</title>
+</head>
+
+<body>
+    <table border=2>
+        {% for result_element in results %}
+        <table border=1>
+            {% for key, value in result_element.items() %}
+            <tr>
+                <th> {{ key }} </th>
+                <td> {{ value }} </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {%endfor%}
+    </table>
+    <p></p>
+    <a href="/"><button>Return to main page</button></a>
+</body>
